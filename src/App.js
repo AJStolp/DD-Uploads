@@ -3,7 +3,7 @@ import './App.css';
 import LandingPage from './landing-page/landing-page';
 import { Route, Switch } from 'react-router-dom';
 import Nav from './nav/nav';
-import SignIn from './Sign-in/sign-in';
+import SignIn from './sign-in/sign-in';
 
 class App extends React.Component {
 render(){
