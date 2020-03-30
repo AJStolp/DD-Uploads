@@ -1,0 +1,37 @@
+.landing-parent-section {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-inputs {
+    background-color: #333333;
+    color: white;
+    margin: 0 45px;
+    font-weight: 800;
+}
+
+.landing-buttons {
+    border: 1px solid black;
+    margin: 0 45px;
+}
+.child {
+    margin: 5px;
+}
+
+.welcome-text {
+    /* text-align: left; */
+    text-align: center;
+    line-height: 25px;
+    margin-left: 10px;
+}
