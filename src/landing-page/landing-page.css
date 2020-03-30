@@ -1,5 +1,5 @@
 .landing-parent-section {
-    padding-top: 150px;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,8 +30,15 @@
 }
 
 .welcome-text {
-    /* text-align: left; */
-    text-align: center;
-    line-height: 25px;
-    margin-left: 10px;
+   line-height: 25px;
+   margin: 0 20px;
+    
+}
+.watch-now {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    line-height: 1.75em;
 }

@@ -1,0 +1,22 @@
+.videos {
+    border: 1px solid black;
+    margin: 5px;
+}
+#home-page-heading {
+    text-align: center;
+}
+.div-home-page {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width: 48em){
+    .div-home-page {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 5px;
+    }
+}
