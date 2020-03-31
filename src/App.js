@@ -5,7 +5,6 @@ import { Route, Switch } from 'react-router-dom';
 import NavLogIn from './nav-log-in/nav-log-in';
 import SignIn from './sign-in-form/sign-up';
 import NavSignUp from './nav-sign-up/nav-sign-up';
-// import WatchNow from './watch-now/watch-now';
 import HomePage from './home-page-videos/home-page';
 
 class App extends React.Component {
