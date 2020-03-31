@@ -15,6 +15,8 @@ class App extends React.Component {
       showMe: true,
       showVideos: true
     }
+    this.hideShowNav = this.hideShowNav.bind(this);
+    this.hideShowVideos = this.hideShowVideos.bind(this);
   }
 
   hideShowNav = () => {
@@ -34,7 +36,7 @@ render(){
   <div>
       {this.state.showMe ? <NavLogIn hideShowNav={this.hideShowNav}/> : <NavSignUp hideShowNav={this.hideShowNav}/>}
       <Switch className="App">
-        <Route exact path='/' component={LandingPage}/>
+        <Route exact path='/' component={LandingPage} hideShowVideos={() => this.hideShowVideos()}/>
         <Route exact path='/Sign-in' component={SignIn} />
         <Route exact path='/home-page' component={HomePage} hideShowVideos={() => this.hideShowVideos()}/>
       </Switch>

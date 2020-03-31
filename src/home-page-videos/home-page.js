@@ -4,8 +4,11 @@ import './home-page.css';
 class HomePage extends React.Component {
     render() {
         return (
-            <div className='div-home-page'>
-            <h2 id='home-page-heading'>Do You Match Up?</h2>
+            <div>
+                <div>
+                <h2 id='home-page-heading'>Do You Match Up?</h2>
+                </div>
+            <section className='div-home-page'>
                 <section className='videos'>
                     <video></video>
                     <h4>Title: Triple Kill In Warzone</h4>
@@ -47,6 +50,7 @@ class HomePage extends React.Component {
                     <h4>Title: Tournament Win in Mario Kart!</h4>
                     <p>Description: Accepting Challengers</p>
                     <p>Rating: <span role='img' aria-label='Emoji Ratings'>&#128577; &#128533; &#128529; &#128522; &#128516;</span></p>
+                </section>
                 </section>
             </div>
         )

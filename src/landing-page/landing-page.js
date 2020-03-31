@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function LandingPage (props) {
         return (
-            <section className='landing-parent-section'>
+        <section className='landing-parent-section'>
             <h1>Skills, Kills, and Thrills</h1>
             <p className='welcome-text'>Explore the landscape of players greatest performances. If you feel like your skills can compete, then upload clips of your own!</p>
             <p>Do not forget to leave a rating!</p>
