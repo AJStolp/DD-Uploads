@@ -8,7 +8,7 @@ function Nav (props) {
             <nav>
                <ul>
                     <li>
-                        <Link to='/Sign-in' onClick={props.hideShowNav}>Log-In</Link>
+                        <Link to='/Sign-in' onClick={props.hideShowNav} className='nav-log-in'>Log-In</Link>
                     </li>
                 </ul>
            </nav>

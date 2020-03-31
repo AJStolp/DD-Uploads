@@ -4,7 +4,7 @@ import './sign-up.css';
 class SignIn extends React.Component {
     render() {
         return (
-            <div>
+            <div className='main-container'>
                 <section className='sign-in'>
                     <label htmlFor='email'>Enter Your Email:</label>
                     <input type='email' required id='email' className='landing-inputs child'></input>

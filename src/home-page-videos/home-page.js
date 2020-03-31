@@ -18,7 +18,7 @@ class HomePage extends React.Component {
                 <section className='videos'>
                     <video></video>
                     <h4>Title: Squad Wipe With Rockets</h4>
-                    <p>Description: You can hang with my squad</p>
+                    <p>Description: Y'all can't hang with my squad</p>
                     <p>Rating: <span role='img' aria-label='Emoji Ratings'>&#128577; &#128533; &#128529; &#128522; &#128516;</span></p>
                 </section>
                 <section className='videos'>

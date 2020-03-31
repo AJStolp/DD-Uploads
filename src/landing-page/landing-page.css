@@ -1,44 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+
 .landing-parent-section {
-    padding-top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0 20px;
 }
 
 .landing-form {
     display: flex;
     flex-direction: column;
     padding: 5px;
-    justify-content: center;
-    align-items: center;
+    background-color: #95afc0;
 }
 
 .landing-inputs {
     background-color: #333333;
     color: white;
-    margin: 0 45px;
     font-weight: 800;
 }
 
 .landing-buttons {
     border: 1px solid black;
-    margin: 0 45px;
 }
 .child {
     margin: 5px;
 }
 
-.welcome-text {
-   line-height: 25px;
-   margin: 0 20px;
-    
-}
 .watch-now {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 20px;
     line-height: 1.75em;
+    text-decoration: none;
+}
+.watch-now-link {
+    border: 2px solid black;
+    padding: 0 4px;
+    color: white;
+    background-color: #333333;
+}
+
+@media(min-width: 48em) {
+    .landing-parent-section {
+        padding-top: 50px;
+        text-align: center;
+    }
+    
+    .landing-form {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        justify-content: center; 
+        align-items: center;
+        background-color: #95afc0;
+    }
 }

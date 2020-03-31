@@ -1,4 +1,11 @@
 ul > li {
     list-style-type: none;
+    text-align: right;
+    margin-right: 2em;
+}
+
+.nav-log-in {
     text-decoration: none;
+    color: black;
+    font-weight: 600;
 }
