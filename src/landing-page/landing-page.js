@@ -18,7 +18,7 @@ function LandingPage (props) {
                 <button type='button' className='landing-buttons child'>Sign up!</button>
             </form>
             <section className='watch-now'>
-                    <h3>Feel free to watch videos without signing up. However, you will not be able to rate or upload videos</h3>
+                    <h3>Feel free to watch videos without signing up, or in. However, you will not be able to rate or upload videos</h3>
                     <Link to='/home-page' className='watch-now watch-now-link' onClick={props.hideShowVideos}>Watch Videos Now</Link>
             </section>
        </section>
