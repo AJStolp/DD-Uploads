@@ -8,8 +8,10 @@ function Nav (props) {
             <nav className='nav-in-out'>
                <ul>
                     <li>
-                        <Link to='/Sign-in' onClick={props.hideShowNav} className='log-in'>Log-In</Link>
                         <Link to='/sign-in-form' className='log-out'>Log Out</Link>
+                    </li>
+                    <li>
+                        <Link to='/Sign-in' onClick={props.hideShowNav} className='log-in'>Log-In</Link>
                     </li>
                 </ul>
            </nav>
