@@ -10,3 +10,14 @@
 .main-container {
     padding-top: 175px;
 }
+
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+.landing-buttons {
+    background-color: #333333;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}

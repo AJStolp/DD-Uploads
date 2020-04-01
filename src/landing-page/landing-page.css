@@ -1,7 +1,10 @@
 *{
     box-sizing: border-box;
 }
-
+::placeholder {
+    color: white;
+    opacity: 1;
+}
 .landing-parent-section {
     display: flex;
     flex-direction: column;
@@ -38,9 +41,10 @@
 }
 .watch-now-link {
     border: 2px solid black;
-    padding: 0 4px;
+    padding: 15px;
     color: white;
     background-color: #333333;
+    font-weight: 600;
 }
 
 @media(min-width: 48em) {

@@ -1,0 +1,16 @@
+.upload-videos-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.upload-inputs {
+    background-color: #333333;
+    padding: 5px;
+    font-weight: 600;
+}
+.upload-button {
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+}

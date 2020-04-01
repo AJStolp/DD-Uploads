@@ -2,7 +2,7 @@
     border: 1px solid black;
     margin: 5px;
 }
-#home-page-heading {
+.home-page-heading {
     text-align: center;
 }
 .div-home-page {
@@ -11,6 +11,11 @@
     padding: 5px;
     justify-content: center;
     align-items: center;
+}
+.upload-video-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: purple;
 }
 
 @media(min-width: 48em){

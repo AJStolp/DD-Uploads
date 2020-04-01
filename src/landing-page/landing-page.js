@@ -10,11 +10,11 @@ function LandingPage (props) {
             <p>Do not forget to leave a rating!</p>
             <form className='landing-form'>
                 <label htmlFor='email'>Enter Your Email:</label>
-                <input type='email' required id='email' className='landing-inputs child'></input>
+                <input type='email' required id='email' className='landing-inputs child' placeholder='Email'></input>
                 <label htmlFor='text'>Enter A Username:</label>
-                <input type='text' id='text' className='landing-inputs child'></input>
+                <input type='text' id='text' className='landing-inputs child' placeholder='Username'></input>
                 <label htmlFor='password'>Enter Your Password:</label>
-                <input type='password' id='password' required className='landing-inputs child'></input>
+                <input type='password' id='password' required className='landing-inputs child' placeholder='Password'></input>
                 <button type='button' className='landing-buttons child'>Sign up!</button>
             </form>
             <section className='watch-now'>

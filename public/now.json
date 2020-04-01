@@ -1,6 +1,7 @@
 {
     "version": 2,
-    "name": "bookmarks-app",
+    "name": "dd-uploads",
+    "alias": "anthony-dd-uploads-app",
     "routes": [
         { "handle": "filesystem" },
         { "src": "/.*", "dest": "/index.html" }

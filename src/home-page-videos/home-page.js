@@ -1,12 +1,15 @@
 import React from 'react';
 import './home-page.css';
+// import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                <h2 id='home-page-heading'>Do You Match Up?</h2>
+                <div className='home-page-heading'>
+                <h2>Do You Match Up?</h2>
+                <Link to='/upload-videos' className='upload-video-link'>Upload Your Videos</Link>
                 </div>
             <section className='div-home-page'>
                 <section className='videos'>

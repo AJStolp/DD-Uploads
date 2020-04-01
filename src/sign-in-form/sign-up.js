@@ -7,10 +7,10 @@ class SignIn extends React.Component {
             <div className='main-container'>
                 <section className='sign-in'>
                     <label htmlFor='email'>Enter Your Email:</label>
-                    <input type='email' required id='email' className='landing-inputs child'></input>
+                    <input type='email' required id='email' className='landing-inputs child' placeholder='Email'></input>
                     <label htmlFor='password'>Enter Your Password:</label>
-                    <input type='password' id='password' required className='landing-inputs child'></input>
-                    <button type='button' className='landing-buttons child'>Sign In!</button>
+                    <input type='password' id='password' required className='landing-inputs child' placeholder='Password'></input>
+                    <button type='submit' className='landing-buttons child'>Sign In!</button>
                 </section>
             </div>
         )

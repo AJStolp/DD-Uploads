@@ -1,8 +1,9 @@
-ul > li {
+/* ul > li {
     list-style-type: none;
     text-align: right;
     margin-right: 2em;
-}
+} */
+
 .sign-up-link {
     text-decoration: none;
     color: black;

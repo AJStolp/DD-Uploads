@@ -6,6 +6,7 @@ import NavLogIn from './nav-log-in/nav-log-in';
 import SignIn from './sign-in-form/sign-up';
 import NavSignUp from './nav-sign-up/nav-sign-up';
 import HomePage from './home-page-videos/home-page';
+import UploadVideos from './upload-videos/upload-videos';
 
 class App extends React.Component {
   constructor(props) {
@@ -38,6 +39,7 @@ render(){
         <Route exact path='/' component={LandingPage} hideShowVideos={() => this.hideShowVideos()}/>
         <Route exact path='/Sign-in' component={SignIn} />
         <Route exact path='/home-page' component={HomePage} hideShowVideos={() => this.hideShowVideos()}/>
+        <Route exact path='/upload-videos' component={UploadVideos} />
       </Switch>
   </div>
     );
