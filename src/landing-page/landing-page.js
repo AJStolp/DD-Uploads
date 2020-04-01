@@ -9,11 +9,11 @@ function LandingPage (props) {
             <p className='welcome-text'>Explore the landscape of players greatest performances. If you feel like your skills can compete, then upload clips of your own!</p>
             <p>Do not forget to leave a rating!</p>
             <form className='landing-form'>
-                <label htmlFor='email'>Enter Your Email:</label>
+                <label htmlFor='email' className='landing-label'>Enter Your Email:</label>
                 <input type='email' required id='email' className='landing-inputs child' placeholder='Email'></input>
-                <label htmlFor='text'>Enter A Username:</label>
+                <label htmlFor='text' className='landing-label'>Enter A Username:</label>
                 <input type='text' id='text' className='landing-inputs child' placeholder='Username'></input>
-                <label htmlFor='password'>Enter Your Password:</label>
+                <label htmlFor='password' className='landing-label'>Enter Your Password:</label>
                 <input type='password' id='password' required className='landing-inputs child' placeholder='Password'></input>
                 <button type='button' className='landing-buttons child'>Sign up!</button>
             </form>

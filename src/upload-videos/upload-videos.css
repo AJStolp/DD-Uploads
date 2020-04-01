@@ -3,14 +3,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+.child-upload {
+    margin: 5px;
 }
 .upload-inputs {
     background-color: #333333;
     padding: 5px;
-    font-weight: 600;
+    font-weight: 800;
+    color: white;
 }
 .upload-button {
     background-color: blue;
     color: white;
     font-weight: 700;
+}
+textarea {
+    width: 45vw;
+    height: 40vw;
+}
+
+@media(min-width: 48em) {
+    textarea {
+        width: 35vw;
+        height: 15vw;
+    }
 }

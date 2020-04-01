@@ -5,11 +5,11 @@ import './nav-log-in.css';
 function Nav (props) {
         
         return (
-            <nav>
+            <nav className='nav-in-out'>
                <ul>
                     <li>
-                        <Link to='/Sign-in' onClick={props.hideShowNav} className='nav-log-in'>Log-In</Link>
-                        {/* <Link to='/upload-videos' className='upload-videos nav-log-in'>Upload Videos</Link> */}
+                        <Link to='/Sign-in' onClick={props.hideShowNav} className='log-in'>Log-In</Link>
+                        <Link to='/sign-in-form' className='log-out'>Log Out</Link>
                     </li>
                 </ul>
            </nav>

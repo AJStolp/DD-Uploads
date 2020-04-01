@@ -1,6 +1,5 @@
 import React from 'react';
 import './home-page.css';
-// import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class HomePage extends React.Component {

@@ -40,6 +40,7 @@ render(){
         <Route exact path='/Sign-in' component={SignIn} />
         <Route exact path='/home-page' component={HomePage} hideShowVideos={() => this.hideShowVideos()}/>
         <Route exact path='/upload-videos' component={UploadVideos} />
+        <Route exact path='/sign-in-form' component={SignIn}/>
       </Switch>
   </div>
     );

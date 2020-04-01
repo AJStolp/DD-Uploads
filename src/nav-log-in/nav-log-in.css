@@ -1,11 +1,15 @@
+.log-in {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.log-out {
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+}
 ul > li {
     list-style-type: none;
     text-align: right;
     margin-right: 2em;
-}
-
-.nav-log-in {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
 }

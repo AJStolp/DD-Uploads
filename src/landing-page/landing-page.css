@@ -1,5 +1,9 @@
 *{
     box-sizing: border-box;
+    padding-bottom: 10px;
+}
+.welcome-text {
+    line-height: 1.75em;
 }
 ::placeholder {
     color: white;
@@ -54,11 +58,10 @@
     }
     
     .landing-form {
-        display: flex;
-        flex-direction: column;
-        padding: 5px;
-        justify-content: center; 
         align-items: center;
         background-color: #95afc0;
+    }
+    .landing-inputs {
+        width: 20vw;
     }
 }
