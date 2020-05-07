@@ -13,10 +13,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       showMe: true,
-      showVideos: true
+      email: '',
+      username: '',
+      password: '',
     }
     this.hideShowNav = this.hideShowNav.bind(this);
-    this.hideShowVideos = this.hideShowVideos.bind(this);
   }
 
   hideShowNav = () => {
@@ -25,10 +26,12 @@ class App extends React.Component {
     })
   }
 
-  hideShowVideos = () => {
+  onEmailChange = (email) => {
+    email.preventDefault();
     this.setState({
-      showVideos: !this.state.showVideos
+      email: email.target.value,
     })
+    console.log(this.state.email)
   }
 
 render(){
@@ -36,7 +39,7 @@ render(){
   <div>
       {this.state.showMe ? <NavLogIn hideShowNav={this.hideShowNav}/> : <NavSignUp hideShowNav={this.hideShowNav}/>}
       <Switch className="App">
-        <Route exact path='/' component={LandingPage} hideShowVideos={() => this.hideShowVideos()}/>
+        <Route exact path='/' component={LandingPage} />
         <Route exact path='/Sign-in' component={SignIn} />
         <Route exact path='/home-page' component={HomePage} hideShowVideos={() => this.hideShowVideos()}/>
         <Route exact path='/upload-videos' component={UploadVideos} />

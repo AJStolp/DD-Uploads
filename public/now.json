@@ -1,7 +1,7 @@
 {
     "version": 2,
     "name": "dd-uploads",
-    "alias": "anthony-dd-uploads-app",
+    "alias": "dd-uploads-app",
     "routes": [
         { "handle": "filesystem" },
         { "src": "/.*", "dest": "/index.html" }
