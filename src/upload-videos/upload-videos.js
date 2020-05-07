@@ -7,22 +7,21 @@ class UploadVideos extends React.Component {
         this.state = {
             title: '',
             content: '',
-            rating: '',
             videos: [],
         }
     }
 
     //methods for getting data
 
-    onTitleChange = (title) => {
+    onTitleChange = async (title) => {
         title.preventDefault();
-        this.setState({
+        await this.setState({
             title: title.target.value
         })
     }
-    onContentChange = (content) => {
+    onContentChange = async (content) => {
         content.preventDefault();
-        this.setState({
+        await this.setState({
             content: content.target.value
         })
     }
