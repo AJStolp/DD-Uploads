@@ -9,9 +9,9 @@ class LandingPage extends React.Component {
                 this.state = {
                         showVideos: true,
                         email: '',
-                        userName: '',
+                        username: '',
                         password: '',
-                        status: '',
+                        status: null,
                 }
                 this.handleFormSubmit = this.handleFormSubmit.bind(this);
         }
@@ -49,13 +49,18 @@ class LandingPage extends React.Component {
         handleFormSubmit = (submit) => {
                 submit.preventDefault();
 
-                let formData = document.getElementById('signupForm');
+                const addedUserData = {
+                        email: this.state.email,
+                        username: this.state.username,
+                        password: this.state.password,
+                }
 
                 const request = {
                         method: 'POST',
                         headers: {
                                 'content-type': 'application/json'
-                        }
+                        },
+                        body: JSON.stringify(addedUserData)
                 };
 
                const url = `${config.API_ENDPOINT}/users`;

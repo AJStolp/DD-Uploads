@@ -1,13 +1,15 @@
-.upload-videos-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    padding: 5px;
+* {
+    box-sizing: border-box;
 }
 .child-upload {
     margin: 5px;
+}
+.upload-videos-form {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
 }
 .upload-inputs {
     background-color: #333333;
