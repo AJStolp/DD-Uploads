@@ -1,7 +1,7 @@
 import config from '../config';
 import React from 'react';
 import './upload-videos.css';
-import { IoIosCloudUpload } from 'react-icons/io';
+import { FaCloudUploadAlt } from 'react-icons/fa';
 
 class UploadVideos extends React.Component {
     constructor(props){
@@ -9,8 +9,8 @@ class UploadVideos extends React.Component {
         this.state = {
             title: '',
             content: '',
-            videos: [],
         }
+        this.submitForm = this.submitForm.bind(this);
     }
 
     //methods for getting data
@@ -31,18 +31,16 @@ class UploadVideos extends React.Component {
     submitForm = (form) => {
         form.preventDefault();
 
-        const addedVideoData = {
-            title: '',
-            content: '',
-            status: '',
-        }
+        let headers = new Headers();
+
+        const formData = new FormData();
+        let myFile = document.getElementById('file').files[0];
+        formData.append('video', myFile);
 
         const request = {
             method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(addedVideoData)
+            headers: headers,
+            body: formData
         };
 
         const url = `${config.API_ENDPOINT}/videos`;
@@ -69,18 +67,24 @@ class UploadVideos extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={(e) => this.submitForm(e)}>
-                    <div className='upload-videos-form'>
-                        <IoIosCloudUpload size='small'/>
-                        <label htmlFor='file'>Browse File to Upload</label>
-                        <input type='file' placeholder='choose the video you want uploaded' className='file'/>
-                    </div>
-                    <div className='upload-videos-form'>
-                        <label htmlFor='title'>Video Title</label>
-                        <input onChange={(e) => this.onTitleChange(e)} type='text' id='title' className='upload-inputs child-upload' placeholder='Your Video Title'/>
-                        <label htmlFor='description'>Video Description</label>
-                        <textarea onChange={(e) =>  this.onContentChange(e)} id='description' className='upload-inputs child-upload' placeholder='Your Video Description'></textarea>
-                        <button type='submit' className='upload-button child-upload'>Upload Your Video</button>
+                <form onSubmit={(e) => this.submitForm(e)} id='form'>
+                    <div className='div-main'>
+
+                        <section className='upload-files'>
+                            <FaCloudUploadAlt id='upload-icon'/>
+                            <label htmlFor='file'>Upload File.</label><br />
+                            <input accept='video/*' type='file' placeholder='Add File' id='file' className='files'/>
+                        </section>
+        
+                   
+                        <section className='video-info'>
+                            <label htmlFor='title'>Video Title</label>
+                            <input onChange={(e) => this.onTitleChange(e)} type='text' id='title' className='' placeholder='Your Video Title'/>
+                            <label htmlFor='description'>Video Description</label>
+                            <textarea onChange={(e) =>  this.onContentChange(e)} id='description' className='' maxLength='140' placeholder='Your Video Description'></textarea>
+                            <button type='submit' className='upload-btn'>Upload Your Video</button>
+                        </section>
+
                     </div>
                 </form>
             </div>
