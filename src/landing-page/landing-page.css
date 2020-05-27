@@ -2,12 +2,15 @@
     box-sizing: border-box;
     padding-bottom: 10px;
 }
+.kills {
+    color: #fca311;
+}
 .welcome-text {
     line-height: 1.75em;
+    font-family: 'Montserrat', sans-serif;
 }
-::placeholder {
-    color: white;
-    opacity: 1;
+.skills-kills-thrills {
+    font-family: 'Jost', sans-serif;
 }
 .landing-parent-section {
     display: flex;
@@ -19,49 +22,77 @@
     display: flex;
     flex-direction: column;
     padding: 5px;
-    background-color: #95afc0;
+    background-color: #14213d;
+}
+.landing-label {
+    color: white;
+    margin: 10px 0;
+    padding: 15px 0;
 }
 
 .landing-inputs {
-    background-color: #333333;
+    font-weight: 800;
+    border: 1px solid #fca311;
+}
+.landing-button-home {
+    background-color: #fca311;
     color: white;
     font-weight: 800;
+    padding: 15px;
+    margin: 20px 80px;
+    border: 2px solid white;
 }
-
-.landing-buttons {
-    border: 1px solid black;
+:hover.watch-now-link {
+    background-color: #fca311;
 }
-.child {
-    margin: 5px;
-}
-
 .watch-now {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     line-height: 1.75em;
     text-decoration: none;
 }
 .watch-now-link {
-    border: 2px solid black;
+    border: 3px solid white;
+    border-style: double;
     padding: 15px;
     color: white;
-    background-color: #333333;
+    background-color: #14213d;
     font-weight: 600;
+    text-align: center;
 }
 
 @media(min-width: 48em) {
     .landing-parent-section {
         padding-top: 50px;
-        text-align: center;
+    }
+    .landing-label {
+        color: white;
+        margin: 10px 44px;
     }
     
     .landing-form {
-        align-items: center;
-        background-color: #95afc0;
+       margin: 0 85px;
     }
     .landing-inputs {
-        width: 20vw;
+        margin: 0 45px;
+    }
+    .welcome-text {
+        line-height: 1.75em;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }
+    .landing-button-home {
+        background-color: #fca311;
+        color: white;
+        font-weight: 800;
+        padding: 15px 0;
+        margin: 40px 165px;
+    }
+    .watch-now {
+        text-align: center;
+    }
+    .watch-now-link {
+        margin: 0 85px;
     }
 }

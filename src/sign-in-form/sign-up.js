@@ -29,10 +29,10 @@ class SignIn extends React.Component {
         return (
             <div className='main-container'>
                 <form className='sign-in'>
-                    <label htmlFor='email'>Enter Your Email:</label>
-                    <input onChange={(e) => this.onEmailChange(e)}  type='email' required id='email' className='landing-inputs child' placeholder='Email'></input>
-                    <label htmlFor='password'>Enter Your Password:</label>
-                    <input onChange={(e) => this.onPasswordChange(e)} type='password' id='password' required className='landing-inputs child' placeholder='Password'></input>
+                    <p htmlFor='email'>Enter Your Email:</p>
+                    <input onChange={(e) => this.onEmailChange(e)}  type='email' required id='email' className='sign-in-inputs' placeholder='Email'></input>
+                    <p htmlFor='password'>Enter Your Password:</p>
+                    <input onChange={(e) => this.onPasswordChange(e)} type='password' id='password' required className='sign-in-inputs' placeholder='Password'></input>
                     <button type='submit' className='landing-buttons child'>Sign In!</button>
                 </form>
             </div>

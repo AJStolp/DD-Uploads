@@ -9,16 +9,14 @@ class UploadVideos extends React.Component {
         this.state = {
             title: '',
             content: '',
+            status: ''
         }
-        this.submitForm = this.submitForm.bind(this);
     }
-
-    //methods for getting data
 
     onTitleChange = async (title) => {
         title.preventDefault();
         await this.setState({
-            title: title.target.value
+            title: title.target.value 
         })
     }
     onContentChange = async (content) => {
@@ -26,21 +24,18 @@ class UploadVideos extends React.Component {
         await this.setState({
             content: content.target.value
         })
+
     }
 
     submitForm = (form) => {
         form.preventDefault();
 
-        let headers = new Headers();
-
-        const formData = new FormData();
-        let myFile = document.getElementById('file').files[0];
-        formData.append('video', myFile);
+        let myForm = document.getElementById('form')
+        const formData = new FormData(myForm);
 
         const request = {
             method: 'POST',
-            headers: headers,
-            body: formData
+            body: formData,
         };
 
         const url = `${config.API_ENDPOINT}/videos`;
@@ -54,11 +49,11 @@ class UploadVideos extends React.Component {
            })
            .then(data => {
                 this.setState({
-                    status: 'Your video upload was successful! :thumbsup:'
+                    status: 'Your video upload was successful! :thumbsup:',
                 })
            })
            .catch(error => {
-               alert(error)
+               console.log(error);
            })
     }
 
@@ -67,24 +62,25 @@ class UploadVideos extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={(e) => this.submitForm(e)} id='form'>
-                    <div className='div-main'>
-
-                        <section className='upload-files'>
+                <form onSubmit={(form) => this.submitForm(form)} id='form'>
+                    <div className='row'>
+    
+                        <section className='column' id='column-1'>
                             <FaCloudUploadAlt id='upload-icon'/>
-                            <label htmlFor='file'>Upload File.</label><br />
-                            <input accept='video/*' type='file' placeholder='Add File' id='file' className='files'/>
+                            <div>
+                                <h2 htmlFor='file' id='up-label'>Upload File.</h2>
+                                <input accept='video/*' name='file' type='file' id='file' className='files'/>
+                            </div>
                         </section>
-        
                    
-                        <section className='video-info'>
-                            <label htmlFor='title'>Video Title</label>
-                            <input onChange={(e) => this.onTitleChange(e)} type='text' id='title' className='' placeholder='Your Video Title'/>
-                            <label htmlFor='description'>Video Description</label>
-                            <textarea onChange={(e) =>  this.onContentChange(e)} id='description' className='' maxLength='140' placeholder='Your Video Description'></textarea>
+                        <section className='column'>
+                            <p htmlFor='title'>Video Title</p>
+                            <input maxLength='40' value={this.state.title} onChange={(title) => this.onTitleChange(title)} type='text' id='title' placeholder='Your Video Title' required/>
+                            <p htmlFor='description'>Video Description</p>
+                            <textarea value={this.state.content} onChange={(content) =>  this.onContentChange(content)} id='description' className='' maxLength='140' placeholder='Your Video Description' required></textarea><br></br>
                             <button type='submit' className='upload-btn'>Upload Your Video</button>
                         </section>
-
+                    
                     </div>
                 </form>
             </div>

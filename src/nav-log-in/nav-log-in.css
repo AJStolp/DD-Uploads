@@ -1,12 +1,14 @@
 .log-in {
     text-decoration: none;
-    color: black;
+    color: #14213d;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
 }
 .log-out {
-    color: red;
+    color: #fca311;
     text-decoration: none;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
 }
 
 ul > li {
@@ -14,4 +16,8 @@ ul > li {
     float: right;
     margin-right: 2em;
     display: inline;
+}
+.nav-in-out {
+    border-bottom: 10px solid #fca311;
+    color: #14213d;
 }
