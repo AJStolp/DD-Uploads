@@ -1,5 +1,6 @@
 import config from '../config';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './upload-videos.css';
 import { FaCloudUploadAlt } from 'react-icons/fa';
 
@@ -33,9 +34,14 @@ class UploadVideos extends React.Component {
         let myForm = document.getElementById('form')
         const formData = new FormData(myForm);
 
+        for (let [key, value] of formData.entries()) { 
+            console.log(key, value, 'I am key value on form data!!');
+          }
+
         const request = {
             method: 'POST',
             body: formData,
+            'Accept': "application/json",
         };
 
         const url = `${config.API_ENDPOINT}/videos`;
@@ -80,6 +86,9 @@ class UploadVideos extends React.Component {
                             <textarea value={this.state.content} onChange={(content) =>  this.onContentChange(content)} id='description' className='' maxLength='140' placeholder='Your Video Description' required></textarea><br></br>
                             <button type='submit' className='upload-btn'>Upload Your Video</button>
                         </section>
+                        <div>
+                        <Link to='/home-page' className='watch-now watch-now-link'>Watch Videos Now</Link>
+                        </div>
                     
                     </div>
                 </form>

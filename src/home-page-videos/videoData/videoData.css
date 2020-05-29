@@ -1,0 +1,17 @@
+/* .videos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+/* .videos {
+    height: 100%;
+    width: 100%;
+} */
+.videos-container {
+   display: inline-block;
+}
+
+.videos {
+    height: 100%;
+    width: 50%;
+}

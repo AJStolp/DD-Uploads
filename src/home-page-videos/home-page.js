@@ -1,7 +1,7 @@
 import React from 'react';
 import './home-page.css';
 import config from '../config';
-import VideoData from './videoData/videoData';
+import VideoData from './videoData/videoData'; 
 
 class HomePage extends React.Component {
 
