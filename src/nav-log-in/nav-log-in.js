@@ -1,22 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './nav-log-in.css';
+import TokenService from '../services/token-service';
 
-function Nav (props) {
-        
+class Nav extends React.Component {
+    handleLogoutClick = () => {
+    }
+
+    renderLogoutLink() {
         return (
-            <nav className='nav-in-out'>
-               <ul>
-                    <li>
-                        <Link to='/sign-in-form' className='log-out'>Log Out</Link>
-                    </li>
-                    <li>
-                        <Link to='/Sign-in' onClick={props.hideShowNav} className='log-in'>Log-In</Link>
-                    </li>
-                </ul>
-           </nav>
+            <div>
+                <Link onClick={this.handleLogoutClick} to='/' className='log-out'>Logout</Link>
+            </div>
         )
-    
-}
+    }
+    renderLoginLink() {
+        return (
+            <div>
+                <Link to='/' className='log-out'>Register</Link>
+                <Link to='/Sign-in' className='log-out'>Sign-in</Link>
+            </div>
 
+        )
+    }
+
+
+
+        render() {
+            return (
+                <nav className='nav-in-out'>
+                   <ul>
+                        <li>
+                            <Link to='/sign-in' className='log-out'>Sign-In</Link>
+                        </li>
+                    </ul>
+                    {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}
+               </nav>
+            )
+        }
+}
+    
 export default Nav

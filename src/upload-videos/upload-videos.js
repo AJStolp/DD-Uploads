@@ -34,10 +34,6 @@ class UploadVideos extends React.Component {
         let myForm = document.getElementById('form')
         const formData = new FormData(myForm);
 
-        for (let [key, value] of formData.entries()) { 
-            console.log(key, value, 'I am key value on form data!!');
-          }
-
         const request = {
             method: 'POST',
             body: formData,
@@ -68,7 +64,7 @@ class UploadVideos extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={(form) => this.submitForm(form)} id='form'>
+                <form onSubmit={(form) => this.submitForm(form)} id='form' encType='multipart/form-data'>
                     <div className='row'>
     
                         <section className='column' id='column-1'>
@@ -81,9 +77,9 @@ class UploadVideos extends React.Component {
                    
                         <section className='column'>
                             <p htmlFor='title'>Video Title</p>
-                            <input maxLength='40' value={this.state.title} onChange={(title) => this.onTitleChange(title)} type='text' id='title' placeholder='Your Video Title' required/>
+                            <input name='title' maxLength='40' value={this.state.title} onChange={(title) => this.onTitleChange(title)} type='text' id='title' placeholder='Your Video Title' required/>
                             <p htmlFor='description'>Video Description</p>
-                            <textarea value={this.state.content} onChange={(content) =>  this.onContentChange(content)} id='description' className='' maxLength='140' placeholder='Your Video Description' required></textarea><br></br>
+                            <textarea name='content' value={this.state.content} onChange={(content) =>  this.onContentChange(content)} id='description' className='' maxLength='140' placeholder='Your Video Description' required></textarea><br></br>
                             <button type='submit' className='upload-btn'>Upload Your Video</button>
                         </section>
                         <div>

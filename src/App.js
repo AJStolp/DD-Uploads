@@ -37,7 +37,7 @@ class App extends React.Component {
 render(){
     return (
   <div>
-      {this.state.showMe ? <NavLogIn hideShowNav={this.hideShowNav}/> : <NavSignUp hideShowNav={this.hideShowNav}/>}
+    <NavLogIn />
       <Switch className="App">
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/Sign-in' component={SignIn} />

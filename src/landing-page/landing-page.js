@@ -2,6 +2,7 @@ import React from 'react';
 import './landing-page.css';
 import { Link } from 'react-router-dom';
 import config from '../config';
+import TokenService from '../services/token-service';
 
 class LandingPage extends React.Component {
         constructor(props) {
@@ -15,6 +16,9 @@ class LandingPage extends React.Component {
                 }
                 this.handleFormSubmit = this.handleFormSubmit.bind(this);
         }
+        static defaultProps = {
+                onLoginSuccess: () => {}
+        }
         //methods
         hideShowVideos = () => {
                 this.setState({
@@ -27,15 +31,13 @@ class LandingPage extends React.Component {
                 await this.setState({
                         email: email.target.value
                 })
-                console.log(this.state.email)
         };
 
-        onUserNameChange = async (userName) => {
-                userName.preventDefault();
+        onUserNameChange = async (username) => {
+                username.preventDefault();
                 await this.setState({
-                        username: userName.target.value
+                        username: username.target.value
                 })
-                console.log(this.state.userName)
         };
 
         onPasswordChange = async (password) => {
@@ -43,11 +45,17 @@ class LandingPage extends React.Component {
                 await this.setState({
                         password: password.target.value,
                 })
-                console.log(this.state.password)
         };
 
         handleFormSubmit = (submit) => {
                 submit.preventDefault();
+
+                const { username, password } = submit.target;
+
+                TokenService.saveAuthToken(
+                        TokenService.makeBasicAuthToken(username, password)
+                )
+                this.props.onLoginSuccess()
 
                 const addedUserData = {
                         email: this.state.email,
