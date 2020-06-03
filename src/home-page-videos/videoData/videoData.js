@@ -22,7 +22,7 @@ class VideoData extends React.Component {
         return (
             <div>
                 <div className='upload-video-link-container'>
-                    <FaArrowAltCircleUp />
+                    <FaArrowAltCircleUp className='upload-icon-watch-page'/>
                     <Link to='/upload-videos' className='upload-video-link'>Upload Your Videos</Link>
                 </div>
                 <div className='videos-container'>

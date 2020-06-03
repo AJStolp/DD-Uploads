@@ -20,7 +20,8 @@
     border: 2px solid white;
     background-color: #fca311;
     padding: 15px;
-    width: 22em;
+    width: 58vw;
+    font-family: 'Montserrat', sans-serif;
 }
 
 textarea {
@@ -36,10 +37,11 @@ textarea {
 }
 .upload-btn {
     border: 2px solid white;
-    width: 22em;
+    width: 58vw;
     background-color: #fca311;
     margin-top: 20px;
     padding: 15px;
+    font-family: 'Montserrat', sans-serif;
 }
 :hover.upload-btn {
     background-color: white;
@@ -73,4 +75,10 @@ textarea {
    #title {
        width: 70%;
    }
+   .files {
+        width: 18em;
+    }
+    .upload-btn {
+        width: 18em;
+    }
 }

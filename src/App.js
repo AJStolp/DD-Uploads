@@ -4,7 +4,6 @@ import LandingPage from './landing-page/landing-page';
 import { Route, Switch } from 'react-router-dom';
 import NavLogIn from './nav-log-in/nav-log-in';
 import SignIn from './sign-in-form/sign-up';
-import NavSignUp from './nav-sign-up/nav-sign-up';
 import HomePage from './home-page-videos/home-page';
 import UploadVideos from './upload-videos/upload-videos';
 import Footer from './footer/footer';

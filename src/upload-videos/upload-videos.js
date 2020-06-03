@@ -68,7 +68,7 @@ class UploadVideos extends React.Component {
                     <div className='row'>
     
                         <section className='column' id='column-1'>
-                            <FaCloudUploadAlt id='upload-icon'/>
+                            <FaCloudUploadAlt id='upload-icon' />
                             <div>
                                 <h2 htmlFor='file' id='up-label'>Upload File.</h2>
                                 <input accept='video/*' name='file' type='file' id='file' className='files'/>
@@ -82,11 +82,10 @@ class UploadVideos extends React.Component {
                             <textarea name='content' value={this.state.content} onChange={(content) =>  this.onContentChange(content)} id='description' className='' maxLength='140' placeholder='Your Video Description' required></textarea><br></br>
                             <button type='submit' className='upload-btn'>Upload Your Video</button>
                         </section>
+                    </div>
                         <div>
                         <Link to='/home-page' className='watch-now watch-now-link'>Watch Videos Now</Link>
                         </div>
-                    
-                    </div>
                 </form>
             </div>
         )
