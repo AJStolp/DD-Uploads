@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './upload-videos.css';
 import { FaCloudUploadAlt } from 'react-icons/fa';
+import TokenService from '../services/token-service';
 
 class UploadVideos extends React.Component {
     constructor(props){
@@ -36,6 +37,9 @@ class UploadVideos extends React.Component {
 
         const request = {
             method: 'POST',
+            headers: {
+                'Authorization': `bearer ${TokenService.getAuthToken()}`,
+            },
             body: formData,
             'Accept': "application/json",
         };
@@ -45,13 +49,13 @@ class UploadVideos extends React.Component {
         fetch(url, request)
            .then(res => {
               if (!res.ok) {
-                   throw new Error('Sorry, something occurred when trying to upload - Please try your upload again.')
+                   throw new Error(alert('You must be signed when trying to upload - Please try your upload again after creating an account or signing in.'))
                }
                return res.json()
            })
            .then(data => {
                 this.setState({
-                    status: 'Your video upload was successful! :thumbsup:',
+                    status: alert('Your video upload was successful!'),
                 })
            })
            .catch(error => {

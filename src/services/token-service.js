@@ -22,5 +22,4 @@ const TokenService = {
         return window.btoa(`${username}:${password}`)
     },
 }
-
 export default TokenService

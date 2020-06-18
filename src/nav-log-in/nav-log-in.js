@@ -1,10 +1,11 @@
 import React from 'react';
+import TokenService from '../services/token-service';
 import { Link } from 'react-router-dom';
 import './nav-log-in.css';
-import TokenService from '../services/token-service';
 
 class Nav extends React.Component {
     handleLogoutClick = () => {
+        TokenService.clearAuthToken()
     }
 
     renderLogoutLink() {
@@ -23,6 +24,17 @@ class Nav extends React.Component {
 
         )
     }
+    // handleSubmitBasicAuth = e => {
+    //     e.preventDefault();
+    //     const { username, password } = e.target;
+
+    //     TokenService.saveAuthToken(
+    //         TokenService.makeBasicAuthToken(username.value, password.value)
+    //     )
+
+    //     username.value = ''
+    //     password.value= ''
+    // }
 
 
 
