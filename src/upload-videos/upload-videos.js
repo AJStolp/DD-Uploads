@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import './upload-videos.css';
 import { FaCloudUploadAlt } from 'react-icons/fa';
 import TokenService from '../services/token-service';
+import LoadingIndicator from '../loadingIndicator/loadingIndicator';
+import { trackPromise } from 'react-promise-tracker';
 
 class UploadVideos extends React.Component {
     constructor(props){
@@ -11,7 +13,7 @@ class UploadVideos extends React.Component {
         this.state = {
             title: '',
             content: '',
-            status: ''
+            status: '',
         }
     }
 
@@ -26,9 +28,9 @@ class UploadVideos extends React.Component {
         await this.setState({
             content: content.target.value
         })
-
+ 
     }
-
+    
     submitForm = (form) => {
         form.preventDefault();
 
@@ -46,10 +48,16 @@ class UploadVideos extends React.Component {
 
         const url = `${config.API_ENDPOINT}/videos`;
 
+        trackPromise(
         fetch(url, request)
            .then(res => {
               if (!res.ok) {
                    throw new Error(alert('You must be signed when trying to upload - Please try your upload again after creating an account or signing in.'))
+               }
+               if(res.ok) {
+                   this.setState({
+                       isLoading: true,
+                   })
                }
                return res.json()
            })
@@ -61,7 +69,8 @@ class UploadVideos extends React.Component {
            .catch(error => {
                console.log(error);
            })
-    }
+        )
+    } 
 
 
 
@@ -73,12 +82,12 @@ class UploadVideos extends React.Component {
     
                         <section className='column' id='column-1'>
                             <FaCloudUploadAlt id='upload-icon' />
+                                <p>Upload time varies - dependant on video size</p>
                             <div>
                                 <h2 htmlFor='file' id='up-label'>Upload File.</h2>
                                 <input accept='video/*' name='file' type='file' id='file' className='files'/>
                             </div>
                         </section>
-                   
                         <section className='column'>
                             <p htmlFor='title'>Video Title</p>
                             <input name='title' maxLength='40' value={this.state.title} onChange={(title) => this.onTitleChange(title)} type='text' id='title' placeholder='Your Video Title' required/>
@@ -87,6 +96,7 @@ class UploadVideos extends React.Component {
                             <button type='submit' className='upload-btn'>Upload Your Video</button>
                         </section>
                     </div>
+                    <LoadingIndicator />
                         <div>
                         <Link to='/home-page' className='watch-now watch-now-link'>Watch Videos Now</Link>
                         </div>

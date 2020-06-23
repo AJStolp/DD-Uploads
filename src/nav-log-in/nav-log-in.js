@@ -2,12 +2,13 @@ import React from 'react';
 import TokenService from '../services/token-service';
 import { Link } from 'react-router-dom';
 import './nav-log-in.css';
+import { FaRegistered, FaSignInAlt } from 'react-icons/fa';
 
 class Nav extends React.Component {
     handleLogoutClick = () => {
         TokenService.clearAuthToken()
+        // window.location.reload(false);
     }
-
     renderLogoutLink() {
         return (
             <div>
@@ -18,35 +19,23 @@ class Nav extends React.Component {
     renderLoginLink() {
         return (
             <div>
-                <Link to='/' className='log-out'>Register</Link>
-                <Link to='/Sign-in' className='log-out'>Sign-in</Link>
+                <Link to='/' className='log-out signIn-register'>Register</Link>
+                <Link to='/Sign-in' className='log-out '>Sign-in</Link>
             </div>
 
         )
     }
-    // handleSubmitBasicAuth = e => {
-    //     e.preventDefault();
-    //     const { username, password } = e.target;
-
-    //     TokenService.saveAuthToken(
-    //         TokenService.makeBasicAuthToken(username.value, password.value)
-    //     )
-
-    //     username.value = ''
-    //     password.value= ''
-    // }
-
-
-
         render() {
             return (
                 <nav className='nav-in-out'>
-                   <ul>
-                        <li>
+                   <ul className='nav-bar'>
+                        {/* <li>
                             <Link to='/sign-in' className='log-out'>Sign-In</Link>
-                        </li>
-                    </ul>
+                        </li> */}
+                    <FaRegistered className='registered-icon'/>
                     {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}
+                    <FaSignInAlt className='sign-in-icon'/>
+                    </ul>
                </nav>
             )
         }

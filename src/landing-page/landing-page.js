@@ -1,7 +1,6 @@
 import React from 'react';
 import './landing-page.css';
 import { Link } from 'react-router-dom';
-import config from '../config';
 import AuthApiService from '../services/auth-api-service';
 
 class LandingPage extends React.Component {
@@ -27,7 +26,6 @@ class LandingPage extends React.Component {
                 event.preventDefault();
                 
                 const { username, password, email } = event.target;
-        
 
                 AuthApiService.postUser({
                         username: username.value,
@@ -41,8 +39,9 @@ class LandingPage extends React.Component {
                             this.props.onRegistrationSuccess()
                         })
                         .then(() => {
-                                let success = 'Signup successful! Welcome!'
+                                let success = 'Signup successful - Welcome! You can now upload your own videos!'
                                 this.setState({status: success})
+                                alert(success)
                         })
                         .catch(res => {
                             this.setState({ error: res.error })
