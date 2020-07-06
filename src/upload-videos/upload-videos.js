@@ -128,9 +128,6 @@ class UploadVideos extends React.Component {
 							<button type='submit' className='upload-btn'>
 								Upload Your Video
 							</button>
-							{/* <section className='section-loading'>
-                            <LoadingIndicator/>
-                            </section> */}
 						</section>
 					</div>
 					<LoadingIndicator />

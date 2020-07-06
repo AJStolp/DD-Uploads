@@ -45,7 +45,6 @@ class SignIn extends React.Component {
 					onSubmit={this.handleSubmitJwtAuth}
 				>
 					<p htmlFor='email'>Enter Your Username:</p>
-					{/* <input onChange={(e) => this.onUsernameChange(e)}  type='text' required id='email' className='sign-in-inputs' placeholder='Username'></input> */}
 					<input
 						name='username'
 						type='text'
@@ -55,7 +54,6 @@ class SignIn extends React.Component {
 						placeholder='Username'
 					></input>
 					<p htmlFor='password'>Enter Your Password:</p>
-					{/* <input onChange={(e) => this.onPasswordChange(e)} type='password' id='password' required className='sign-in-inputs' placeholder='Password'></input> */}
 					<input
 						name='password'
 						type='password'

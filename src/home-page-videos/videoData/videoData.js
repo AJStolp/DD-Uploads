@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./videoData.css";
 import { FaArrowAltCircleUp } from "react-icons/fa";
-// import video-js from 'video.js';
 
 class VideoData extends React.Component {
 	render() {
