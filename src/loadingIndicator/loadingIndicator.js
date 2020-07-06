@@ -7,9 +7,9 @@ import Loader from 'react-loader-spinner';
     const { promiseInProgress } = usePromiseTracker();
     return (
         promiseInProgress &&
-        <div className='loader-spinner'>
-            <Loader type="ThreeDots" color="#fca311" height="100" width="100" />
-        </div>
+        <section className='loader-spinner'>
+            <Loader type="ThreeDots" color="#fca311" />
+        </section>
     )
 }
 export default LoadingIndicator

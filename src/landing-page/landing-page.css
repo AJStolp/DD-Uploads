@@ -1,99 +1,105 @@
-*{
-    box-sizing: border-box;
-    padding-bottom: 10px;
+* {
+	box-sizing: border-box;
+	padding-bottom: 10px;
 }
 .kills {
-    color: #fca311;
+	color: #fca311;
 }
 .welcome-text {
-    line-height: 1.75em;
-    font-family: 'Montserrat', sans-serif;
+	line-height: 1.75em;
+	font-family: "Montserrat", sans-serif;
 }
 .skills-kills-thrills {
-    font-family: 'Jost', sans-serif;
+	font-family: "Jost", sans-serif;
 }
 .landing-parent-section {
-    display: flex;
-    flex-direction: column;
-    margin: 0 20px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 20px;
 }
 
 .landing-form {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    background-color: #14213d;
-    border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	background-color: #14213d;
+	border-radius: 12px;
 }
 .landing-label {
-    color: white;
-    margin: 10px 0;
-    padding: 15px 0;
+	color: white;
+	margin: 10px 0;
+	padding: 15px 0;
 }
 
 .landing-inputs {
-    font-weight: 800;
-    border: 1px solid #fca311;
+	font-weight: 800;
+	border: 1px solid #fca311;
 }
 .landing-button-home {
-    background-color: #fca311;
-    color: white;
-    font-weight: 800;
-    padding: 15px;
-    margin: 20px 80px;
-    border: 2px solid white;
+	background-color: #fca311;
+	color: white;
+	font-weight: 800;
+	padding: 15px;
+	margin: 20px 80px;
+	border: 2px solid white;
 }
 :hover.watch-now-link {
-    background-color: #fca311;
+	background-color: #fca311;
 }
 .watch-now {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.75em;
-    text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	line-height: 1.75em;
+	text-decoration: none;
 }
 .watch-now-link {
-    border: 3px solid white;
-    border-style: double;
-    padding: 15px;
-    color: white;
-    background-color: #14213d;
-    font-weight: 600;
-    text-align: center;
+	border: 3px solid white;
+	border-style: double;
+	padding: 15px;
+	color: white;
+	background-color: #14213d;
+	font-weight: 600;
+	text-align: center;
+	border-radius: 12px;
+}
+.span-class-error {
+	text-align: center;
+	color: red;
 }
 
-@media(min-width: 48em) {
-    .landing-parent-section {
-        padding-top: 50px;
-    }
-    .landing-label {
-        color: white;
-        margin: 10px 44px;
-    }
-    
-    .landing-form {
-       margin: 0 85px;
-    }
-    .landing-inputs {
-        margin: 0 45px;
-    }
-    .welcome-text {
-        line-height: 1.75em;
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
-    }
-    .landing-button-home {
-        background-color: #fca311;
-        color: white;
-        font-weight: 800;
-        padding: 15px 0;
-        margin: 40px 165px;
-    }
-    .watch-now {
-        text-align: center;
-    }
-    .watch-now-link {
-        margin: 0 85px;
-    }
+
+@media (min-width: 48em) {
+	.landing-parent-section {
+		padding-top: 50px;
+	}
+	.landing-label {
+		color: white;
+		margin: 10px 44px;
+	}
+
+	.landing-form {
+		margin: 0 85px;
+	}
+	.landing-inputs {
+		margin: 0 45px;
+	}
+	.welcome-text {
+		line-height: 1.75em;
+		font-family: "Montserrat", sans-serif;
+		text-align: center;
+	}
+	.landing-button-home {
+		background-color: #fca311;
+		color: white;
+		font-weight: 800;
+		padding: 15px 0;
+		margin: 40px 165px;
+	}
+	.watch-now {
+		text-align: center;
+	}
+	.watch-now-link {
+		margin: 0 95px;
+	}
 }

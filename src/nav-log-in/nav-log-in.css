@@ -19,16 +19,11 @@
     text-align: right;
     margin: 20px 50px 0 0;
 }
-.signIn-register {
+/* .signIn-register {
     padding: 0 20px 0 0;
-}
-.registered-icon {
-    height: 100%;
-    width: 0.75em;
-    margin: 0 6px 0 0;
-}
-.sign-in-icon {
-    height: 100%;
-    width: 0.75em;
-    margin: 0 0px 0 6px;
+} */
+.border:after{
+    content: " | ";
+    padding: 0 10px;
+    /* color: #14213d; */
 }

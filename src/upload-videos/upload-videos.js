@@ -65,6 +65,7 @@ class UploadVideos extends React.Component {
                 this.setState({
                     status: alert('Your video upload was successful!'),
                 })
+                window.location.assign('/home-page')
            })
            .catch(error => {
                console.log(error);
@@ -94,6 +95,9 @@ class UploadVideos extends React.Component {
                             <p htmlFor='description'>Video Description</p>
                             <textarea name='content' value={this.state.content} onChange={(content) =>  this.onContentChange(content)} id='description' className='' maxLength='140' placeholder='Your Video Description' required></textarea><br></br>
                             <button type='submit' className='upload-btn'>Upload Your Video</button>
+                            {/* <section className='section-loading'>
+                            <LoadingIndicator/>
+                            </section> */}
                         </section>
                     </div>
                     <LoadingIndicator />

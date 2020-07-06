@@ -7,6 +7,7 @@ import SignIn from './sign-in-form/sign-up';
 import HomePage from './home-page-videos/home-page';
 import UploadVideos from './upload-videos/upload-videos';
 import Footer from './footer/footer';
+import PrivateRoute from './utils/privateRoute';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,21 +17,20 @@ class App extends React.Component {
       username: '',
       password: '',
     }
-    this.hideShowNav = this.hideShowNav.bind(this);
+    // this.hideShowNav = this.hideShowNav.bind(this);
   }
 
-  hideShowNav = () => {
-    this.setState({
-      showMe: !this.state.showMe
-    })
-  }
+  // hideShowNav = () => {
+  //   this.setState({
+  //     showMe: !this.state.showMe
+  //   })
+  // }
 
   onEmailChange = (email) => {
     email.preventDefault();
     this.setState({
       email: email.target.value,
     })
-    console.log(this.state.email)
   }
 
 render(){
@@ -40,8 +40,8 @@ render(){
       <Switch className="App">
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/Sign-in' component={SignIn} />
-        <Route exact path='/home-page' component={HomePage} hideShowVideos={() => this.hideShowVideos()}/>
-        <Route exact path='/upload-videos' component={UploadVideos} />
+        <Route exact path='/home-page' component={HomePage}/>
+        <PrivateRoute path={'/upload-videos'} component={UploadVideos} />
         <Route exact path='/sign-in-form' component={SignIn}/>
       </Switch>
       <Footer />

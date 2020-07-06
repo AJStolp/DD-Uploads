@@ -28,6 +28,10 @@
     padding: 15px;
     margin: 20px 65px;
 }
+.alert {
+    color: red;
+    text-align: center;
+}
 @media (min-width: 48em) {
     .landing-buttons {
         font-weight: 800;

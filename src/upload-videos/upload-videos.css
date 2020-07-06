@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+/* .section-loading {
+   visibility: hidden;
+} */
 #up-label {
     color: white;
 }
@@ -22,6 +25,7 @@
     padding: 15px;
     width: 58vw;
     font-family: 'Montserrat', sans-serif;
+    border-radius: 14px;
 }
 
 textarea {
@@ -38,10 +42,12 @@ textarea {
 .upload-btn {
     border: 2px solid white;
     width: 58vw;
+    height: 60px;
     background-color: #fca311;
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 15px;
     font-family: 'Montserrat', sans-serif;
+    border-radius: 14px;
 }
 :hover.upload-btn {
     background-color: white;
@@ -54,6 +60,13 @@ textarea {
     overflow: scroll;
 }
 @media(min-width: 48em) {
+    /* .section-loading {
+        visibility: visible;
+        float: right;
+        position: relative;
+        top: 40px;
+        right: 150px;
+    } */
    .row {
        display: flex;
        justify-content: center;
