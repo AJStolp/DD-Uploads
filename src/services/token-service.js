@@ -1,25 +1,24 @@
-import config from '../config';
+import config from "../config";
 
 const TokenService = {
+	saveAuthToken(token) {
+		window.sessionStorage.setItem(config.TOKEN_KEY, token);
+	},
 
-    saveAuthToken(token) {
-        window.sessionStorage.setItem(config.TOKEN_KEY, token)
-    },
+	getAuthToken() {
+		return window.sessionStorage.getItem(config.TOKEN_KEY);
+	},
 
-    getAuthToken(){
-        return window.sessionStorage.getItem(config.TOKEN_KEY)
-    },
+	clearAuthToken() {
+		return window.sessionStorage.removeItem(config.TOKEN_KEY);
+	},
 
-    clearAuthToken() {
-        return window.sessionStorage.removeItem(config.TOKEN_KEY)
-    },
+	hasAuthToken() {
+		return !!TokenService.getAuthToken();
+	},
 
-    hasAuthToken() {
-        return !!TokenService.getAuthToken()
-    },
-
-    makeBasicAuthToken(username, password) {
-        return window.btoa(`${username}:${password}`)
-    },
-}
-export default TokenService
+	makeBasicAuthToken(username, password) {
+		return window.btoa(`${username}:${password}`);
+	},
+};
+export default TokenService;

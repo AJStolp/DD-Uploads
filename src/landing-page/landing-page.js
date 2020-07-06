@@ -49,9 +49,14 @@ class LandingPage extends React.Component {
 				alert(success);
 				alert(signIn);
 			})
-			.catch((res) => {
-				this.setState({ error: res.error });
-			}, setTimeout(function(){ window.location.reload()}, 3000));
+			.catch(
+				(res) => {
+					this.setState({ error: res.error });
+				},
+				setTimeout(function () {
+					window.location.reload();
+				}, 3000)
+			);
 	};
 	render() {
 		return (
@@ -105,10 +110,7 @@ class LandingPage extends React.Component {
 						placeholder='Password'
 					></input>
 
-					<button
-						type='submit'
-						className='landing-button-home child'
-					>
+					<button type='submit' className='landing-button-home child'>
 						Sign up!
 					</button>
 					<span className='span-class-error'>{this.state.error}</span>

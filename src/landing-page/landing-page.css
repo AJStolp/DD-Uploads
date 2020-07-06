@@ -40,7 +40,9 @@
 	color: white;
 	font-weight: 800;
 	padding: 15px;
-	margin: 20px 80px;
+	margin-top: 20px;
+	width: 100%;
+	border-radius: 12px;
 	border: 2px solid white;
 }
 :hover.watch-now-link {
@@ -68,7 +70,6 @@
 	color: red;
 }
 
-
 @media (min-width: 48em) {
 	.landing-parent-section {
 		padding-top: 50px;
@@ -90,11 +91,10 @@
 		text-align: center;
 	}
 	.landing-button-home {
-		background-color: #fca311;
-		color: white;
-		font-weight: 800;
-		padding: 15px 0;
-		margin: 40px 165px;
+		margin: 20px auto;
+		width: 75%;
+		border-radius: 12px;
+		border: 2px solid white;
 	}
 	.watch-now {
 		text-align: center;

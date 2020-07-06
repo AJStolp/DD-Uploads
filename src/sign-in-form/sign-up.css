@@ -1,51 +1,65 @@
 .sign-in {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: #14213d;
-    border-radius: 12px;
-    margin: 0 6px;
-    padding: 45px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	background-color: #14213d;
+	border-radius: 12px;
+	margin: 0 6px;
+	padding: 45px 0;
 }
 .sign-in-inputs {
-    border: 2px solid #fca311;
-    margin: 0 10px;
+	border: 2px solid #fca311;
+	margin: 0 10px;
 }
 .main-container {
-    padding: 75px 0;
+	padding: 75px 0;
 }
 .sign-in > p {
-    color: white;
-    text-align: left;
-    margin-left: 10px;
-    font-family: 'Montserrat', sans-serif;
+	color: white;
+	text-align: left;
+	margin-left: 10px;
+	font-family: "Montserrat", sans-serif;
 }
 .landing-buttons {
-    background-color: #fca311;
-    color: white;
-    font-weight: 800;
-    padding: 15px;
-    margin: 20px 65px;
+	background-color: #fca311;
+	color: white;
+	font-weight: 800;
+	padding: 15px;
+	margin: 20px auto;
+	width: 75%;
 }
 .alert {
-    color: red;
-    text-align: center;
+	color: red;
+	text-align: center;
+}
+.sign-up-watch-now {
+	background-color: white;
+	color: #fca311;
+	font-weight: 700;
+	padding: 15px;
+	margin: 20px auto;
+	width: 75%;
+	text-decoration: none;
 }
 @media (min-width: 48em) {
-    .landing-buttons {
-        font-weight: 800;
-        padding: 15px;
-        margin: 20px 165px;
-    }
-    .sign-in {
-        margin: 0 150px;
-        align-items: center;
-    }
-    .sign-in-inputs {
-        width: 50%;
-    }
-    .landing-buttons {
-        width: 50%;
-    }
+	.landing-buttons {
+		font-weight: 800;
+		padding: 15px;
+		margin: 20px 165px;
+	}
+	.sign-in {
+		margin: 0 150px;
+		align-items: center;
+	}
+	.sign-in-inputs {
+		width: 50%;
+	}
+	.landing-buttons {
+		width: 50%;
+	}
+	.sign-up-watch-now {
+		width: 50%;
+		font-weight: 800;
+	}
 }

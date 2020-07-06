@@ -1,10 +1,10 @@
 div.footer {
-    border-top: 10px solid #fca311;
-    text-align: center;
-    padding-top: 20px;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 45px;
+	border-top: 10px solid #fca311;
+	text-align: center;
+	padding-top: 20px;
+	font-family: "Montserrat", sans-serif;
+	margin-top: 45px;
 }
 .dose {
-    color: #fca311;
+	color: #fca311;
 }

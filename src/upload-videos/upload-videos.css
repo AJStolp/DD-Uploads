@@ -1,97 +1,87 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-/* .section-loading {
-   visibility: hidden;
-} */
 #up-label {
-    color: white;
+	color: white;
 }
 .column {
-    margin: 0 40px;
+	margin: 0 40px;
 }
 .column > p {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-family: "Montserrat", sans-serif;
 }
 .row {
-    background: #14213d;
-    border-radius: 12px;
-    margin: 70px 10px;
+	background: #14213d;
+	border-radius: 12px;
+	margin: 70px 10px;
 }
 .files {
-    border: 2px solid white;
-    background-color: #fca311;
-    padding: 15px;
-    width: 58vw;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 14px;
+	border: 2px solid white;
+	background-color: #fca311;
+	padding: 15px;
+	width: 58vw;
+	font-family: "Montserrat", sans-serif;
+	border-radius: 14px;
 }
 
 textarea {
-    resize: both;
-    overflow: scroll;
-    width: 100%;
-    border: 2px solid #fca311;
+	resize: both;
+	overflow: scroll;
+	width: 100%;
+	border: 2px solid #fca311;
 }
 #upload-icon {
-    height: 100%;
-    width: 10em;
-    color: #fca311;
+	height: 100%;
+	width: 10em;
+	color: #fca311;
 }
 .upload-btn {
-    border: 2px solid white;
-    width: 58vw;
-    height: 60px;
-    background-color: #fca311;
-    margin-top: 50px;
-    padding: 15px;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 14px;
+	border: 2px solid white;
+	width: 58vw;
+	height: 60px;
+	background-color: #fca311;
+	margin-top: 50px;
+	padding: 15px;
+	font-family: "Montserrat", sans-serif;
+	border-radius: 14px;
 }
 :hover.upload-btn {
-    background-color: white;
+	background-color: white;
 }
 
 #title {
-    border:  2px solid #fca311;
-    width: 100%;
-    resize: both;
-    overflow: scroll;
+	border: 2px solid #fca311;
+	width: 100%;
+	resize: both;
+	overflow: scroll;
 }
-@media(min-width: 48em) {
-    /* .section-loading {
-        visibility: visible;
-        float: right;
-        position: relative;
-        top: 40px;
-        right: 150px;
-    } */
-   .row {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       margin: 70px 100px;
-       padding: 40px 0;
-   }
-   .column {
-       flex: 50%;
-       padding: 10px;
-       margin: 0 20px;
-   }
-   textarea {
-       width: 70%;
-   }
-   #column-1 {
-       text-align: center;
-   }
-   #title {
-       width: 70%;
-   }
-   .files {
-        width: 18em;
-    }
-    .upload-btn {
-        width: 18em;
-    }
+@media (min-width: 48em) {
+	.row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 70px 100px;
+		padding: 40px 0;
+	}
+	.column {
+		flex: 50%;
+		padding: 10px;
+		margin: 0 20px;
+	}
+	textarea {
+		width: 70%;
+	}
+	#column-1 {
+		text-align: center;
+	}
+	#title {
+		width: 70%;
+	}
+	.files {
+		width: 18em;
+	}
+	.upload-btn {
+		width: 18em;
+	}
 }
