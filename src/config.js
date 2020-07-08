@@ -1,4 +1,4 @@
 export default {
-	API_ENDPOINT: "http://localhost:8000/api",
+	API_ENDPOINT: "https://shrouded-inlet-41818.herokuapp.com",
 	TOKEN_KEY: "dduploads-client-auth-token",
 };
