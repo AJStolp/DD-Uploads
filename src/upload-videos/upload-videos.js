@@ -39,7 +39,7 @@ class UploadVideos extends React.Component {
 		const request = {
 			method: "POST",
 			headers: {
-				Authorization: `bearer ${TokenService.getAuthToken()}`,
+				Authorization: `Bearer ${TokenService.getAuthToken()}`,
 			},
 			body: formData,
 			Accept: "application/json",
