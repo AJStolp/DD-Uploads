@@ -14,6 +14,7 @@ class VideoData extends React.Component {
 							src={video.video_url}
 							controls
 							data-setup='{}'
+							preload='metadata'
 						></video>
 					</videos-js>
 					<h3 className='video-title'>{video.title}</h3>
