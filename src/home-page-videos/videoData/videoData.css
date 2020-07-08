@@ -5,6 +5,7 @@
 .upload-icon-watch-page {
 	height: 100%;
 	width: 1.5em;
+	margin-right: 10px;
 }
 .videos-container {
 	display: grid;
