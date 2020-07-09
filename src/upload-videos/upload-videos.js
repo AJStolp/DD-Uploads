@@ -51,7 +51,6 @@ class UploadVideos extends React.Component {
 			fetch(url, request, {mode: 'no-cors'})
 				.then((res) => {
 					if (!res.ok) {
-						console.log(res.error)
 						throw new Error(
 							alert(
 								"You must be signed when trying to upload - Please try your upload again after creating an account or signing in."
