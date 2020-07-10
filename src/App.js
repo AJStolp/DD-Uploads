@@ -17,22 +17,7 @@ class App extends React.Component {
 			username: "",
 			password: "",
 		};
-		// this.hideShowNav = this.hideShowNav.bind(this);
 	}
-
-	// hideShowNav = () => {
-	//   this.setState({
-	//     showMe: !this.state.showMe
-	//   })
-	// }
-
-	onEmailChange = (email) => {
-		email.preventDefault();
-		this.setState({
-			email: email.target.value,
-		});
-	};
-
 	render() {
 		return (
 			<div>

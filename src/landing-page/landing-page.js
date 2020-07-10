@@ -18,13 +18,6 @@ class LandingPage extends React.Component {
 		},
 	};
 
-	//methods
-	hideShowVideos = () => {
-		this.setState({
-			showVideos: !this.state.showVideos,
-		});
-	};
-
 	handleFormSubmit = (event) => {
 		event.preventDefault();
 
