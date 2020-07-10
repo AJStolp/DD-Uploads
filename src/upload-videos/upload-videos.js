@@ -42,12 +42,10 @@ class UploadVideos extends React.Component {
 				Authorization: `Bearer ${TokenService.getAuthToken()}`,
 			},
 			body: formData,
-			// Accept: "application/json",
+			Accept: "application/json",
 		};
 
 		const url = `${config.API_ENDPOINT}/videos`;
-		// const proxyurl = "https://sleepy-woodland-29636.herokuapp.com/";
-		// const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 		trackPromise(
 			fetch(url, request)
