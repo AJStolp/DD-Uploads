@@ -46,8 +46,9 @@ class UploadVideos extends React.Component {
 		};
 
 		const url = `${config.API_ENDPOINT}/videos`;
-		const proxyurl = "https://sleepy-woodland-29636.herokuapp.com/";
-		 
+		// const proxyurl = "https://sleepy-woodland-29636.herokuapp.com/";
+		const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
 		trackPromise(
 			fetch(proxyurl + url, request)
 				.then((res) => {
