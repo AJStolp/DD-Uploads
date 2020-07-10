@@ -46,15 +46,15 @@ class UploadVideos extends React.Component {
 		};
 
 		const url = `${config.API_ENDPOINT}/videos`;
-		const proxyurl = "https://cors-anywhere.herokuapp.com/";
-		console.log('hey hey')
+		const proxyurl = "https://sleepy-woodland-29636.herokuapp.com/";
+		 
 		trackPromise(
 			fetch(proxyurl + url, request)
 				.then((res) => {
 					if (!res.ok) {
 						throw new Error(
 							alert(
-								"You must be signed when trying to upload - Please try your upload again after creating an account or signing in."
+								"Make sure you are signed in then try agin :)"
 							)
 						);
 					}
