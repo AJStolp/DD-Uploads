@@ -101,7 +101,7 @@ class UploadVideos extends React.Component {
 							</div>
 						</section>
 						<section className='column'>
-							<p htmlFor='title'>Video Title</p>
+							<p>Video Title</p>
 							<input
 								title='video title'
 								name='title'
@@ -113,7 +113,7 @@ class UploadVideos extends React.Component {
 								placeholder='Your Video Title'
 								required
 							/>
-							<p htmlFor='description'>Video Description</p>
+							<p>Video Description</p>
 							<textarea
 								title='video description'
 								name='content'
