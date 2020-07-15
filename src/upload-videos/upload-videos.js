@@ -52,9 +52,7 @@ class UploadVideos extends React.Component {
 				.then((res) => {
 					if (!res.ok) {
 						throw new Error(
-							alert(
-								"Make sure you are signed in then try agin :)"
-							)
+							alert("Make sure you are signed in then try agin :)")
 						);
 					}
 					if (res.ok) {
@@ -93,6 +91,7 @@ class UploadVideos extends React.Component {
 									Upload File.
 								</h2>
 								<input
+									title='file upload'
 									accept='video/*'
 									name='file'
 									type='file'
@@ -104,6 +103,7 @@ class UploadVideos extends React.Component {
 						<section className='column'>
 							<p htmlFor='title'>Video Title</p>
 							<input
+								title='video title'
 								name='title'
 								maxLength='40'
 								value={this.state.title}
@@ -115,6 +115,7 @@ class UploadVideos extends React.Component {
 							/>
 							<p htmlFor='description'>Video Description</p>
 							<textarea
+								title='video description'
 								name='content'
 								value={this.state.content}
 								onChange={(content) => this.onContentChange(content)}
