@@ -42,9 +42,6 @@
 	width: 75%;
 	text-decoration: none;
 }
-label {
-	visibility: hidden;
-}
 @media (min-width: 48em) {
 	.landing-buttons {
 		font-weight: 800;
