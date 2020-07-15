@@ -44,7 +44,7 @@ class SignIn extends React.Component {
 					className='sign-in border-gradient-purple'
 					onSubmit={this.handleSubmitJwtAuth}
 				>
-					<p htmlFor='email'>Enter Your Username:</p>
+					<p>Enter Your Username:</p>
 					<input
 						title='email'
 						name='username'
@@ -54,8 +54,7 @@ class SignIn extends React.Component {
 						className='sign-in-inputs'
 						placeholder='Username'
 					></input>
-					<p htmlFor='password'>Enter Your Password:</p>
-					<label htmlFor='password'></label>
+					<p>Enter Your Password:</p>
 					<input
 						title='password'
 						name='password'
