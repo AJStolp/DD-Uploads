@@ -48,7 +48,7 @@ class UploadVideos extends React.Component {
 		const url = `${config.API_ENDPOINT}/videos`;
 
 		trackPromise(
-			fetch(url, {mode: "no-cors"}, request)
+			fetch(url, request)
 				.then((res) => {
 					if (!res.ok) {
 						throw new Error(
