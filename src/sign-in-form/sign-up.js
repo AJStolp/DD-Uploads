@@ -27,7 +27,7 @@ class SignIn extends React.Component {
 				username.value = "";
 				password.value = "";
 				TokenService.saveAuthToken(res.authToken);
-				window.location.assign("/upload-videos");
+				// window.location.assign("/upload-videos");
 				this.props.onLoginSuccess();
 			})
 			.catch((res) => {

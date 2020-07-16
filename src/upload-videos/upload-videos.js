@@ -66,7 +66,7 @@ class UploadVideos extends React.Component {
 					this.setState({
 						status: alert("Your video upload was successful!"),
 					});
-					// window.location.assign("/home-page");
+					window.location.assign("/home-page");
 				})
 				.catch((error) => {
 					console.log(error);
