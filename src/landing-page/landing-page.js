@@ -46,9 +46,9 @@ class LandingPage extends React.Component {
 				(res) => {
 					this.setState({ error: res.error });
 				},
-				setTimeout(function () {
-					window.location.reload();
-				}, 3000)
+				// setTimeout(function () {
+				// 	window.location.reload();
+				// }, 3000)
 			);
 	};
 	render() {
