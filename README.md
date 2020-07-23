@@ -12,4 +12,17 @@ I have a few iterations in mind for this app. I would like to add what user uplo
 This app was a huge learning experience. Specifically working with mulit/part form data and making sure that data is getting to the server correctly. 
 
 Landing Page:
-<img src="file:///Users/anthonystolp/Desktop/Screen%20Shot%202020-07-23%20at%203.27.08%20PM.png"/>
+
+![Screenshot](landingpage.png)
+
+Sign-in Page:
+
+![Screenshot](sign-in.png)
+
+Watch Videos:
+
+![Screenshot](watchvideos.png)
+
+Upload Videos:
+
+![Screenshot](upload.png)
